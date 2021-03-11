@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Validação de Formulário</title>
+</head>
+<body>
+    
+        <div class="screen">
+            <div class="leftside">
+                <img src="https://www.sebrae.com.br/Sebrae/Portal%20Sebrae/Imagens%20SebraeNA/x1_Banner_700x300_1.png.pagespeed.ic.mz-1rav1kp.png" alt="img-board">
+            </div>
+            <div class="rightside">
+                <h1>Sign Up</h1>
+                <form method="POST" action="cadastro.php" class="validator">
+                    <label>
+                        Name: <br>
+                        <input type="text" name="name" class="name" data-rules="required|min=2">
+                    </label>
+                    <label>
+                        Last Name: <br>
+                        <input type="text" name="lastname" class="last-name" data-rules="required|min=2">
+                    </label>
+                    <label>
+                        E-mail: <br>
+                        <input type="text" name="email" class="email" data-rules="required|email">
+                    </label>
+                    <label>
+                        Password: <br>
+                        <input type="password" name="password" class="password" data-rules="required|min=6">
+                    </label>
+                    <label>
+                        <input type="submit" value="Create Account">
+                    </label>
+                </form>
+                <div>
+                    Already have an account? <a href="">Sign In</a>
+                </div>
+            </div>
+        </div>
+
+    <script src="./src/app.js"></script>
+</body>
+</html>
